@@ -28,10 +28,9 @@ public class ResultsPage extends Page {
                 new HtmlElementLocatorFactory(PageFactory.getDriver())), this);
     }
 
-    @ActionTitle("количество результатов поиска должно быть")
+    @ActionTitle("количество результатов поиска должно быть не равно нулю")
     public void checkResultCount(String resultCountString){
         int resultCount = Integer.parseInt(resultCountString);
-
-        Assert.assertEquals("Incorrect count of search results", resultCount, results.size());
+        Assert.assertNotEquals("Zero count of search results", resultCount, results.size());
     }
 }
