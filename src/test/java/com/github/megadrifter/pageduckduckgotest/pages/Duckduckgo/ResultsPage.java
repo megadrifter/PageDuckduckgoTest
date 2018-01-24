@@ -29,8 +29,8 @@ public class ResultsPage extends Page {
     }
 
     @ActionTitle("количество результатов поиска должно быть не равно нулю")
-    public void checkResultCount(String resultCountString){
-        int resultCount = Integer.parseInt(resultCountString);
+    public void checkResultCount(){
+        int resultCount = 0;
         Assert.assertNotEquals("Zero count of search results", resultCount, results.size());
     }
 }

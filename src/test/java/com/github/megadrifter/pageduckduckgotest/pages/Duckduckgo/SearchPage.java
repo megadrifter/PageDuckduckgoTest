@@ -26,7 +26,7 @@ import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementLocatorFactory
 /**
  * 
  */
-@PageEntry(title = "Главная страница", url = "")
+@PageEntry(title = "Главная страница")
 public class SearchPage extends Page {
 
     @ElementTitle("Найти")
